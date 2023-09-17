@@ -1,0 +1,22 @@
+---
+title: "it works!"
+layout: "default.html"
+---
+  {% include 'components/header/header-3.html' %}
+  {% include 'components/features/features-1.html' %}
+
+  <section class="inset-0 flex justify-center items-center flex-col">
+    
+    <div>
+      <span class="text-blue-700">Good design</span>
+    </div>
+    <div class="mt-8">
+      <h2 class="text-lg font-semibold">Website Items</h2>
+      <ul>
+        {% for item in collections.item %}
+        <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  
